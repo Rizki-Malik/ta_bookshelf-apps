@@ -34,4 +34,4 @@ Selain itu, penggunaan Web Storage, seperti `localStorage` dan `sessionStorage`,
 # Author
 - Muhammad Rizki Malik Aziz
 - Website: [https://rizki-malik.github.io/portfolio-website/](https://rizki-malik.github.io/portfolio-website/)
-- GitHub: [https://github.com/Rizki-Malik](https://github.com/Rizki-Malik)
+- LinkedIn: [https://www.linkedin.com/in/muhammad-rizki-malik-aziz-4143581a6/](https://www.linkedin.com/in/muhammad-rizki-malik-aziz-4143581a6/)
