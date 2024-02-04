@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf Apps</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <section class="search-container">
+                <form id="formSearch" action="" method="post" class="formSearch">
+                    <button type="submit" class="cari-btn"><i class='bx bx-search-alt-2'></i></button>
+                    <div class="form-group">
+                        <input class="form-field" type="text" name="pencarian" id="pencarian" placeholder="Cari buku...">
+                    </div>
+                    <div class="form-search-bottom">
+                        <button type="reset" class="reset-btn"><i class='bx bx-reset'></i></button>
+                    </div>
+                </form>
+            </section>
+        </nav>
+    </header>
+
+    <main>
+        <section class="top">
+            <h1 class="title">Bookshelf Apps</h1>
+            <article class="form-container">
+                <h2 class="form-title">Tambah Buku Baru</h2>
+                <form id="formDataBuku" action="" method="post">
+                    <div class="form-group">
+                        <label class="label" for="judul">Judul</label>
+                        <input class="form-field" type="text" name="judul" id="judul" placeholder="&nbsp;" required>
+                        <span class="focus-bg"></span>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <label class="label" for="penulis">Penulis</label>
+                            <input class="form-field" type="text" name="penulis" id="penulis" placeholder="&nbsp;" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="label" for="tahun">Tahun</label>
+                            <input class="form-field" type="number" name="tahun" id="tahun" placeholder="&nbsp;" required>
+                        </div>
+                    </div>
+                    <div class="form-check">
+                        <label class="label" for="isRead">Sudah selesai dibaca</label>
+                        <input class="cek" type="checkbox" name="isRead" id="isRead" placeholder="&nbsp;">
+                    </div>
+                    <button type="submit" class="submit-btn">Simpan</button>
+                </form>
+            </article>
+            <div class="details-modal-overlay" id="editModalOverlay"></div>
+            <div class="details-modal" id="editModal">
+                <div class="details-modal-close" id="editModalClose" onclick="closeEditModal()">
+                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                        <path fill="currentColor" d="M5.657 4.343a2 2 0 012.828 0L12 9.172l3.515-3.829a2 2 0 012.828 2.828L14.828 12l3.515 3.829a2 2 0 01-2.828 2.828L12 14.828l-3.515 3.829a2 2 0 01-2.828-2.828L9.172 12 5.657 8.171a2 2 0 010-2.828z"></path>
+                    </svg>
+                </div>
+                <div class="details-modal-title">
+                    <h1>Edit Buku</h1>
+                </div>
+                <div class="details-modal-content">
+                    <article class="form-container">
+                        <form id="formEdit" action="" method="post">
+                            <div class="form-group">
+                                <label class="label" for="editJudul">Judul</label>
+                                <input class="form-field" type="text" name="judul" id="editJudul" placeholder="" required>
+                                <span class="focus-bg"></span>
+                            </div>
+                            <div class="row">
+                                <div class="form-group">
+                                    <label class="label" for="editPenulis">Penulis</label>
+                                    <input class="form-field" type="text" name="penulis" id="editPenulis" placeholder="" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="label" for="editTahun">Tahun</label>
+                                    <input class="form-field" type="number" name="tahun" id="editTahun" placeholder="" required>
+                                </div>
+                            </div>
+                            <div class="form-check-edit">
+                                <label class="label" for="editIsRead">Sudah selesai dibaca</label>
+                                <input type="checkbox" name="isRead" id="editIsRead" placeholder="&nbsp;">
+                            </div>
+                            <button type="submit" class="submit-editBtn">Simpan Perubahan</button>
+                        </form>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="bottom">
+            <details class="left-container" open>
+              <summary class="container-title">Buku Belum Dibaca</summary>
+              <div id="belumDibaca" class="cards"></div>
+            </details>
+            <details class="right-container" open>
+              <summary class="container-title">Buku Sudah Dibaca</summary>
+              <div id="sudahDibaca" class="cards"></div>
+            </details>
+        </section>
+        
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

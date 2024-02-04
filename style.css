@@ -1,0 +1,274 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    border-bottom: 1px solid #30444E;
+    text-align: center;
+    padding: 15px;
+    background-color: #040D12;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: #040D12;
+    color: #93B1A6;
+    display: flex;
+    height: calc(100vh - 52px); 
+}
+
+.hidden {
+  display: none;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    margin-right: 10px;
+    color: #5E7D7D;
+}
+
+.formSearch {
+    display: flex;
+    align-items: center;
+}
+
+.cari-btn{
+    background: transparent;
+    border: none;
+    color: white;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.selesai-btn,
+.hapus-btn,
+.edit-btn,
+.kembalikan-btn{
+    margin: 10px 10px 0 10px;
+    border: none;
+    padding: 3px 6px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #F8FAE5;
+}
+
+.reset-btn {
+    margin-left: 15px;
+    background: #576E86;
+    border: none;
+    padding: 3px 6px;
+    border-radius: 10px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    border-right: 1px solid #30444E;
+    text-align: center;
+    background-color: #040D12;
+    color: #93B1A6;
+}
+
+.title {
+    padding: 40px 0 200px 0;
+}
+
+.bottom {
+    margin-left: 20%;
+    width: 80%;
+    padding: 50px;
+    height: 100%;
+    background-color: #040D12;
+    color: #F8FAE5;
+}
+
+h1 {
+    color: #D2E3C8;
+}
+
+.container-title {
+    color: #5C8374;
+    margin-bottom: 10px;
+}
+
+.form-container{
+    width: 100%;
+	font-size: 16px;
+}
+
+.form-field,
+.label{
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 16px;
+    color: #fff;
+}
+
+.label {
+    display: block;
+    margin-top: 20px;
+}
+
+.cek{
+    margin-top: 10px;
+}
+
+
+.form-field {
+    background: transparent;
+    border: none;
+    border-bottom: 1px dashed #83A4C5;
+    width: 275px;
+    outline: none;
+    font-style: italic;
+}
+
+.form-field:focus {
+    border-bottom: 1px dashed #D9FFA9;
+}
+.submit-editBtn,
+.submit-btn {
+    margin-top: 20px;
+    background: #F8FAE5;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 10px;
+    color: #3C3633;
+    cursor: pointer;
+}
+
+.selesai-btn:hover,
+.hapus-btn:hover,
+.edit-btn:hover,
+.kembalikan-btn:hover{
+    background: #86A789;
+}
+
+.reset-btn:hover ,
+.submit-btn:hover {
+    background: #394D61;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+.item {
+    margin: 20px 10px;
+    background-color: #43766C;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 1.25rem;
+    transition: .15s ease-in;
+    width: 200px;
+    text-align: center;
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+
+.item-writer{
+    margin-top: 5px;
+}
+
+.collapsed {
+    display: none; 
+}
+  
+.details-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(4,13,18, 0.5);
+    z-index: 10;
+}
+
+.details-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #43766C;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 11;
+}
+
+.details-modal-overlay.active {
+    display: block;
+}
+
+.details-modal.active {
+    display: block;
+}
+
+#editModalClose{
+    cursor: pointer;
+}
+
+
+summary {
+	list-style: none;
+}
+
+summary::-webkit-details-marker {
+	display: none;
+}
+
+summary {
+	border: 2px solid #4F6F52;
+	padding: .75em 1em;
+	cursor: pointer;
+	position: relative;
+	padding-left: calc(1.75rem + .75rem + .75rem);
+}
+
+summary:before {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: .75rem;
+	content: "↓";
+	width: 1.75rem;
+	height: 1.75rem;
+	background-color: #527853;
+	color: #FFF;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	flex-shrink: 0;
+}
+
+details[open] summary {
+	background-color: #D2E3C8;
+}
+
+details[open] summary:before {
+	content: "↑";
+}
+
+summary:hover {
+	background-color: #D2E3C8;
+    color: #4F6F52;
+}
